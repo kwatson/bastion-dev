@@ -79,8 +79,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            "default_ssh_key=${{ secrets.default_ssh_key }}"
-            "motd=${{ secrets.motd }}"
+            "default_ssh_key=${{ secrets.DEFAULT_SSH_KEY }}"
+            "motd=${{ secrets.MOTD }}"
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
